@@ -1,5 +1,5 @@
 {
-    "name": "Slothsoft.UnityExtensions.Tests.Runtime",
+    "name": "Slothsoft.UnityExtensions.Tests.PlayMode",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",

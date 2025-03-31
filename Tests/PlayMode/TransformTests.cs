@@ -4,14 +4,13 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace Slothsoft.UnityExtensions.Tests.Runtime {
+namespace Slothsoft.UnityExtensions.Tests.PlayMode {
     [TestFixture(TestOf = typeof(TransformExtensions))]
     sealed class TransformTests {
         [TestCase(0, ExpectedResult = null)]
         [TestCase(1, ExpectedResult = null)]
         [TestCase(2, ExpectedResult = null)]
         [UnityTest]
-        [RequiresPlayMode]
         public IEnumerator TestRuntimeClear(int childCount) {
             var context = new GameObject();
 

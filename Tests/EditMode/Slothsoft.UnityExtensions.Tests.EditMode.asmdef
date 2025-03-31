@@ -1,5 +1,5 @@
 {
-    "name": "Slothsoft.UnityExtensions.Tests.Editor",
+    "name": "Slothsoft.UnityExtensions.Tests.EditMode",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",

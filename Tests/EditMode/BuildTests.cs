@@ -5,7 +5,7 @@ using System.Linq;
 using NUnit.Framework;
 using Slothsoft.UnityExtensions.Editor;
 
-namespace Slothsoft.UnityExtensions.Tests.Editor {
+namespace Slothsoft.UnityExtensions.Tests.EditMode {
     [TestFixture(TestOf = typeof(Build))]
     sealed class BuildTests {
         IEnumerable<string> projectFiles => new[] {

@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace Slothsoft.UnityExtensions.Tests.Runtime {
+namespace Slothsoft.UnityExtensions.Tests.EditMode {
     [TestFixture(TestOf = typeof(ExpandableAttribute))]
     sealed class ExpandableAttributeTests {
         interface IOne {

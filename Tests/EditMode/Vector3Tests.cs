@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace Slothsoft.UnityExtensions.Tests.Runtime {
+namespace Slothsoft.UnityExtensions.Tests.EditMode {
     [TestFixture(TestOf = typeof(Vector3Extensions))]
     sealed class Vector3Tests {
         [Test]

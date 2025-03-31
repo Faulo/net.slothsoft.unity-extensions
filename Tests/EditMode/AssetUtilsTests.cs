@@ -6,7 +6,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityObject = UnityEngine.Object;
 
-namespace Slothsoft.UnityExtensions.Tests.Editor {
+namespace Slothsoft.UnityExtensions.Tests.EditMode {
     [TestFixture(typeof(DefaultAsset), "Assets/Scenes", true, "Assets")]
     [TestFixture(typeof(DefaultAsset), "Packages/net.slothsoft.unity-extensions/Runtime", true, "Packages")]
     [TestFixture(typeof(AssemblyDefinitionAsset), "Packages/net.slothsoft.unity-extensions/Runtime/Slothsoft.UnityExtensions.asmdef", false, "Packages/net.slothsoft.unity-extensions")]

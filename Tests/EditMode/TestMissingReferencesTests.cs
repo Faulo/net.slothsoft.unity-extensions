@@ -3,7 +3,7 @@ using UnityEngine;
 using SuT = Slothsoft.UnityExtensions.Editor.Test;
 using UnityObject = UnityEngine.Object;
 
-namespace Slothsoft.UnityExtensions.Tests.Editor {
+namespace Slothsoft.UnityExtensions.Tests.EditMode {
     sealed class TestMissingReferencesTests {
         [Test]
         public void GivenObject_WhenIsValid_ThenReturnTrue() {

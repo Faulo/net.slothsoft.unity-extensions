@@ -2,7 +2,7 @@ using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 
-namespace Slothsoft.UnityExtensions.Tests.Editor {
+namespace Slothsoft.UnityExtensions.Tests.EditMode {
     [TestFixture(typeof(TextAsset), "CHANGELOG.md")]
     [TestFixture(typeof(TextAsset), "README.md")]
     [TestFixture(typeof(DefaultAsset), "Script CSharp Template.unitypackage")]

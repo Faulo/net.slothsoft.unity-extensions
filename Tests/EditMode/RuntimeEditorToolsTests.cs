@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityObject = UnityEngine.Object;
 
-namespace Slothsoft.UnityExtensions.Tests.Runtime {
+namespace Slothsoft.UnityExtensions.Tests.EditMode {
     [TestFixture(typeof(TestObject), typeof(TestObjectEditor), false, TestOf = typeof(RuntimeEditorTools<>))]
     [TestFixture(typeof(TestComponent), typeof(TestComponentEditor), true, TestOf = typeof(RuntimeEditorTools<>))]
     sealed class RuntimeEditorToolsTests<TObject, TEditor>
@@ -28,7 +28,7 @@ namespace Slothsoft.UnityExtensions.Tests.Runtime {
                 obj = ScriptableObject.CreateInstance(typeof(TObject)) as TObject;
             }
 
-            editor = Editor.CreateEditor(obj, typeof(TEditor)) as TEditor;
+            editor = UnityEditor.Editor.CreateEditor(obj, typeof(TEditor)) as TEditor;
 
             Assert.IsNotNull(obj);
             Assert.IsNotNull(editor);

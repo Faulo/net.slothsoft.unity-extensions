@@ -3,7 +3,7 @@ using Slothsoft.UnityExtensions.Editor;
 using UnityEditor;
 using UnityEditorInternal;
 
-namespace Slothsoft.UnityExtensions.Tests.Editor {
+namespace Slothsoft.UnityExtensions.Tests.EditMode {
     sealed class CSharpUtilsTests {
         [TestCase("Editor/", "CSharpFileFixer/CSharpModificationProcessor.cs", "Slothsoft.UnityExtensions.Editor.asmdef")]
         [TestCase("Runtime/", "AssemblyInfo.cs", "Slothsoft.UnityExtensions.asmdef")]

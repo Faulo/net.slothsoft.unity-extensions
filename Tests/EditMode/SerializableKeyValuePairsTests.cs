@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace Slothsoft.UnityExtensions.Tests.Runtime {
+namespace Slothsoft.UnityExtensions.Tests.EditMode {
     [TestFixture(TestOf = typeof(SerializableKeyValuePairs<,>))]
     sealed class SerializableKeyValuePairsTests {
         [TestCase("0", "1")]
