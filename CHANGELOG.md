@@ -46,6 +46,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added AssetImportContext.TryDependOnArtifact<T>(string path, out T artifact).
 - Added Implementation, ImplementationForAttribute, ImplementationLocator.
 
+### Added
+- Changed required test-framework from v2 to v1.
+
 
 ## [3.1.0] - 2023-11-28
 
