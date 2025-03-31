@@ -6,7 +6,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
     sealed class KeyValuePairTests {
         [Test]
         public void TestDeconstruct() {
-            var dict = new Dictionary<int, string>() {
+            Dictionary<int, string> dict = new() {
                 [0] = "Hello",
                 [10] = "World"
             };

@@ -43,10 +43,11 @@ namespace Slothsoft.UnityExtensions.Tests.PlayMode {
             CollectionAssert.AreEqual(children, context.transform.GetChildren());
         }
 
-        [TestCase(0)]
-        [TestCase(1)]
-        [TestCase(2)]
-        public void TestClear(int childCount) {
+        [TestCase(0, ExpectedResult = null)]
+        [TestCase(1, ExpectedResult = null)]
+        [TestCase(2, ExpectedResult = null)]
+        [UnityTest]
+        public IEnumerator TestClear(int childCount) {
             var context = new GameObject();
 
             var children = new Transform[childCount];
@@ -56,6 +57,8 @@ namespace Slothsoft.UnityExtensions.Tests.PlayMode {
             }
 
             context.transform.Clear();
+
+            yield return null;
 
             Assert.AreEqual(0, context.transform.childCount);
         }

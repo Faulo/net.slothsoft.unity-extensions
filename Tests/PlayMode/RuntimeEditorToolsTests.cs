@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityObject = UnityEngine.Object;
 
-namespace Slothsoft.UnityExtensions.Tests.EditMode {
+namespace Slothsoft.UnityExtensions.Tests.PlayMode {
     [TestFixture(typeof(TestObject), typeof(TestObjectEditor), false, TestOf = typeof(RuntimeEditorTools<>))]
     [TestFixture(typeof(TestComponent), typeof(TestComponentEditor), true, TestOf = typeof(RuntimeEditorTools<>))]
     sealed class RuntimeEditorToolsTests<TObject, TEditor>

@@ -7,8 +7,8 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
     sealed class CSharpUtilsTests {
         [TestCase("Editor/", "CSharpFileFixer/CSharpModificationProcessor.cs", "Slothsoft.UnityExtensions.Editor.asmdef")]
         [TestCase("Runtime/", "AssemblyInfo.cs", "Slothsoft.UnityExtensions.asmdef")]
-        [TestCase("Tests/Editor/", "CSharpUtilsTests.cs", "Slothsoft.UnityExtensions.Tests.Editor.asmdef")]
-        [TestCase("Tests/Runtime/", "AssemblyInfo.cs", "Slothsoft.UnityExtensions.Tests.Runtime.asmdef")]
+        [TestCase("Tests/EditMode/", "CSharpUtilsTests.cs", "Slothsoft.UnityExtensions.Tests.EditMode.asmdef")]
+        [TestCase("Tests/PlayMode/", "AssemblyInfo.cs", "Slothsoft.UnityExtensions.Tests.PlayMode.asmdef")]
         [TestCase("", "package.json", "")]
         [TestCase("", "FileThatDoesNotExist.txt", "")]
         public void TestGetNamespace(string assetDirectory, string filePath, string assemblyPath) {

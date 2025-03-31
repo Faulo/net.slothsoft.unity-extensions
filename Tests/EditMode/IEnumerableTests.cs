@@ -26,7 +26,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
             int testSum = 0;
             IEnumerable<int> testArray = new int[] { 1, 2, 3, 4, 5 };
 
-            testArray.ForAll(i => testSum += i);
+            _ = testArray.ForAll(i => testSum += i);
 
             Assert.AreEqual(testSum, testArray.Sum());
         }
@@ -39,7 +39,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         #endregion
 
         #region Log
-        static IEnumerable<string[]> logMessages = new string[][] {
+        static readonly IEnumerable<string[]> logMessages = new string[][] {
             new string[0],
             new[] { "Hello", "World!" },
             new[] { "" },
@@ -51,7 +51,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
                 LogAssert.Expect(LogType.Log, messages[i]);
             }
 
-            messages.Log();
+            _ = messages.Log();
         }
         #endregion
 
@@ -65,7 +65,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         #endregion
 
         #region  RandomElement
-        int[] testArray = new int[] { 1, 2, 3 };
+        readonly int[] testArray = new int[] { 1, 2, 3 };
         [Test]
         public void TestRandomElementWithArray() {
             Assert.Contains(
@@ -88,7 +88,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         }
         [Test]
         public void TestRandomElementThrowsWhenNull() {
-            Assert.Throws<UnityEngine.Assertions.AssertionException>(
+            _ = Assert.Throws<UnityEngine.Assertions.AssertionException>(
                 () => default(IEnumerable<object>).RandomElement(),
                 "Source must not be null."
             );
@@ -132,7 +132,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         readonly int randomNumberIterations = 1000;
         [Test]
         public void TestRandomWeightedElementThrowsWhenNull() {
-            Assert.Throws<UnityEngine.Assertions.AssertionException>(
+            _ = Assert.Throws<UnityEngine.Assertions.AssertionException>(
                 () => default(IEnumerable<object>).RandomWeightedElement(key => 0),
                 "Source must not be null."
             );
@@ -152,7 +152,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         [Test]
         public void TestRandomWeightedElementFromListWith1ElementNegativeChance() {
             for (int i = 0; i < randomNumberIterations; i++) {
-                Assert.Throws<UnityEngine.Assertions.AssertionException>(
+                _ = Assert.Throws<UnityEngine.Assertions.AssertionException>(
                     () => new object[1] { new() }.RandomWeightedElement(o => -1),
                     "Weight must be positive or zero."
                 );
@@ -175,13 +175,13 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         [TestCase(true)]
         [TestCase(false)]
         public void TestRandomWeightedElementFromLootTable(bool useLambda) {
-            var table = new Dictionary<string, int> {
+            Dictionary<string, int> table = new() {
                 ["Uncommon"] = 9,
                 ["Common"] = 90,
                 ["Mythic"] = 0,
                 ["Rare"] = 1
             };
-            var results = new Dictionary<string, int> {
+            Dictionary<string, int> results = new() {
                 ["Common"] = 0,
                 ["Uncommon"] = 0,
                 ["Rare"] = 0,
@@ -207,7 +207,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         #region RandomWeightedElementDescending
         [Test]
         public void TestRandomWeightedElementDescendingThrowsWhenNull() {
-            Assert.Throws<UnityEngine.Assertions.AssertionException>(
+            _ = Assert.Throws<UnityEngine.Assertions.AssertionException>(
                 () => default(IEnumerable<object>).RandomWeightedElementDescending(key => 0),
                 "Source must not be null."
             );
@@ -215,14 +215,14 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         [TestCase(true)]
         [TestCase(false)]
         public void TestRandomWeightedElementDescending(bool useLambda) {
-            var weights = new Dictionary<int, int> {
+            Dictionary<int, int> weights = new() {
                 [0] = 1,
                 [1] = 0,
                 [2] = 2,
                 [3] = 3
             };
 
-            var l = new List<int>();
+            List<int> l = new();
 
             int n = 1000 * 1000;
 

@@ -8,7 +8,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
     [TestFixture(typeof(DefaultAsset), "Script CSharp Template.unitypackage")]
     [TestFixture(typeof(DefaultAsset), "WebGL IFrame Template.unitypackage")]
     sealed class StaticAssetTests<T> {
-        string name;
+        readonly string name;
 
         public StaticAssetTests(string name) {
             this.name = name;

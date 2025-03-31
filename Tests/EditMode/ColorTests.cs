@@ -6,14 +6,14 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
     sealed class ColorTests {
         [Test]
         public void TestDeconstructWithoutAlpha() {
-            var (red, green, blue) = new Color(0f, 0.25f, 0.5f);
+            (float red, float green, float blue) = new Color(0f, 0.25f, 0.5f);
             Assert.AreEqual(0f, red);
             Assert.AreEqual(0.25f, green);
             Assert.AreEqual(0.5f, blue);
         }
         [Test]
         public void TestDeconstructWithAlpha() {
-            var (red, green, blue, alpha) = new Color(0f, 0.25f, 0.5f, 0.75f);
+            (float red, float green, float blue, float alpha) = new Color(0f, 0.25f, 0.5f, 0.75f);
             Assert.AreEqual(0f, red);
             Assert.AreEqual(0.25f, green);
             Assert.AreEqual(0.5f, blue);

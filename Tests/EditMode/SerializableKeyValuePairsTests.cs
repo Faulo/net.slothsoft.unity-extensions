@@ -77,7 +77,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
 
             int i = 0;
 
-            foreach (var (actualKey, actualValue) in dict) {
+            foreach ((string actualKey, string actualValue) in dict) {
                 Assert.AreEqual(key, actualKey);
                 Assert.AreEqual(value, actualValue);
                 i++;
@@ -102,7 +102,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         }
 
         SerializableKeyValuePairs<string, string> CreateDictionary(string key, string value) {
-            var dict = new SerializableKeyValuePairs<string, string>();
+            SerializableKeyValuePairs<string, string> dict = new();
             dict.SetItems(new Dictionary<string, string> { [key] = value });
             return dict;
         }

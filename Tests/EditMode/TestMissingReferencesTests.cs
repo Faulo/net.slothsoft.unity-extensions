@@ -7,7 +7,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
     sealed class TestMissingReferencesTests {
         [Test]
         public void GivenObject_WhenIsValid_ThenReturnTrue() {
-            var obj = new PhysicMaterial();
+            var obj = ScriptableObject.CreateInstance<ScriptableObject>();
 
             bool actual = SuT.IsValidReference(obj);
 
@@ -16,7 +16,7 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
 
         [Test]
         public void GivenDestroyedObject_WhenIsValid_ThenReturnFalse() {
-            var obj = new PhysicMaterial();
+            var obj = ScriptableObject.CreateInstance<ScriptableObject>();
 
             UnityObject.DestroyImmediate(obj);
 
