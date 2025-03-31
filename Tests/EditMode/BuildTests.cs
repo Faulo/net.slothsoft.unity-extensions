@@ -11,8 +11,8 @@ namespace Slothsoft.UnityExtensions.Tests.EditMode {
         IEnumerable<string> projectFiles => new[] {
             AssemblyInfo.NAMESPACE_RUNTIME,
             AssemblyInfo.NAMESPACE_EDITOR,
-            AssemblyInfo.NAMESPACE_TESTS_RUNTIME,
-            AssemblyInfo.NAMESPACE_TESTS_EDITOR
+            AssemblyInfo.NAMESPACE_TESTS_PLAYMODE,
+            AssemblyInfo.NAMESPACE_TESTS_EDITMODE
         }.Select(ns => ns + ".csproj");
 
         [Test]
