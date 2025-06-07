@@ -8,7 +8,6 @@ C# extension functions, attributes and editor tools for common Unity problems.
 ## Key features:
 - Additional Linq-like IEnumerable extensions.
 - Expandable attribute, to in-place edit asset references.
-- HDRP <=> URP Asset converter.
 - Project file fixer, to set C# version and warning level for .csproj files.
 - A .cs template for proper namespace support.
 - A WebGL template for use in iframes.
