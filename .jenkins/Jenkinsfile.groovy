@@ -4,6 +4,7 @@ pipeline {
 	}
 	environment {
 		BRANCH_NAME = 'main'
+		UNITY_EMPTY_MANIFEST = '.jenkins/manifest.json'
 	}
 	stages {
 		stage('Linux') {
