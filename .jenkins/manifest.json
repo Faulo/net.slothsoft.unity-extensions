@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+  },
+  "scopedRegistries": [
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+	    "net.slothsoft",
+        "net.tnrd.nsubstitute"
+      ]
+    }
+  ]
+}
