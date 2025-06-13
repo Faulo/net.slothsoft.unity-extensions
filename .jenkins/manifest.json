@@ -6,7 +6,7 @@
       "name": "Slothsoft",
       "url": "http://packages.slothsoft.net",
       "scopes": [
-	    "net.slothsoft"
+	    "net.slothsoft.test-runner"
       ]
     },
     {
