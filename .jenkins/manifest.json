@@ -9,7 +9,7 @@
       "scopes": [
 	    "net.slothsoft"
       ]
-    }
+    },
     {
       "name": "OpenUPM",
       "url": "https://package.openupm.com",
