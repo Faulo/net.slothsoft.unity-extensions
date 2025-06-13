@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "net.slothsoft.unity-extensions": "4.0.0"
   },
   "scopedRegistries": [
     {
