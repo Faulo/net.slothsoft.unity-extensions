@@ -6,6 +6,10 @@ pipeline {
 		BRANCH_NAME = 'main'
 		UNITY_EMPTY_MANIFEST = '.jenkins/manifest.json'
 	}
+	options {
+		disableConcurrentBuilds()
+		disableResume()
+	}
 	stages {
 		stage('Linux') {
 			steps {
