@@ -15,6 +15,10 @@ pipeline {
 							PACKAGE_LOCATION : '',
 							UNITY_NODE : 'unity && linux',
 
+							// If given, automatically use these credentials to license a free Unity version.
+							UNITY_CREDENTIALS : 'Slothsoft-Unity',
+							EMAIL_CREDENTIALS : 'Slothsoft-Google',
+
 							// Assert that CHANGELOG.md has been updated.
 							TEST_CHANGELOG : '1',
 							CHANGELOG_LOCATION : 'CHANGELOG.md',
@@ -42,6 +46,10 @@ pipeline {
 							// Define Unity package location relative to repository.
 							PACKAGE_LOCATION : '',
 							UNITY_NODE : 'unity && windows',
+
+							// If given, automatically use these credentials to license a free Unity version.
+							UNITY_CREDENTIALS : 'Slothsoft-Unity',
+							EMAIL_CREDENTIALS : 'Slothsoft-Google',
 
 							// Assert that CHANGELOG.md has been updated.
 							TEST_CHANGELOG : '1',
