@@ -17,7 +17,7 @@
     "com.unity.modules.physics": "1.0.0"
   },
   "repository": {
-    "url": "https://github.com/Faulo/net.slothsoft.unity-extensions.git",
+    "url": "git+https://github.com/Faulo/net.slothsoft.unity-extensions.git",
     "type": "git"
   },
   "author": {
