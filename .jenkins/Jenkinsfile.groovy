@@ -37,7 +37,6 @@ pipeline {
 
 							// Deploy the package to a Verdaccio server.
 							DEPLOY_TO_VERDACCIO : '0',
-							VERDACCIO_URL : 'http://verdaccio',
 							VERDACCIO_CREDENTIALS : 'Slothsoft-Verdaccio',
 							)
 				}
@@ -69,7 +68,6 @@ pipeline {
 
 							// Deploy the package to a Verdaccio server.
 							DEPLOY_TO_VERDACCIO : '1',
-							VERDACCIO_URL : 'http://verdaccio',
 							VERDACCIO_CREDENTIALS : 'Slothsoft-Verdaccio',
 							)
 				}
