@@ -14,7 +14,8 @@
     "com.unity.settings-manager": "2.0.1",
     "com.unity.editorcoroutines": "1.0.0",
     "com.unity.modules.tilemap": "1.0.0",
-    "com.unity.modules.physics": "1.0.0"
+    "com.unity.modules.physics": "1.0.0",
+    "net.slothsoft.test-runner": "1.0.1-pre.1"
   },
   "repository": {
     "url": "git+https://github.com/Faulo/net.slothsoft.unity-extensions.git",

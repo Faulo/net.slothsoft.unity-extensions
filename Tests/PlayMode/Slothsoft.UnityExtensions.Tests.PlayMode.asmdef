@@ -4,7 +4,9 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Slothsoft.UnityExtensions"
+        "Slothsoft.UnityExtensions",
+        "Slothsoft.TestRunner",
+        "TNRD.NSubstitute"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
