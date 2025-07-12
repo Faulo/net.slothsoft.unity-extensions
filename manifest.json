@@ -197,6 +197,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Slothsoft.UnityExtensions.GameObjectPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Slothsoft.UnityExtensions.GameObjectPool.html",
+          "hash": "RIiIYkDKNU2Rw4vaDqv20g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Slothsoft.UnityExtensions.IEnumerableExtensions.TrySelectFunc-1.yml",
       "output": {
         ".html": {
@@ -465,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Slothsoft.UnityExtensions.html",
-          "hash": "05ywQaeuYieU7WHw7JKCoQ=="
+          "hash": "ulvJsN91s3aaS2MkyoGEYw=="
         }
       },
       "is_incremental": false,
@@ -489,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "IcDplWBNMSTb35D4q1raIQ=="
+          "hash": "F7NikUV9dFoUv4p8wppScg=="
         }
       },
       "is_incremental": false,
@@ -540,7 +552,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 39,
+          "total_file_count": 40,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

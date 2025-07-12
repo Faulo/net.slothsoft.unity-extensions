@@ -739,6 +739,82 @@ references:
   isSpec: "True"
   fullName: Slothsoft.UnityExtensions.ExpandableAttribute.ValidateType
   nameWithType: ExpandableAttribute.ValidateType
+- uid: Slothsoft.UnityExtensions.GameObjectPool
+  name: GameObjectPool
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html
+  commentId: T:Slothsoft.UnityExtensions.GameObjectPool
+  fullName: Slothsoft.UnityExtensions.GameObjectPool
+  nameWithType: GameObjectPool
+- uid: Slothsoft.UnityExtensions.GameObjectPool.#ctor(Transform,GameObject,System.Int32)
+  name: GameObjectPool(Transform, GameObject, Int32)
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool__ctor_Transform_GameObject_System_Int32_
+  commentId: M:Slothsoft.UnityExtensions.GameObjectPool.#ctor(Transform,GameObject,System.Int32)
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.GameObjectPool(Transform, GameObject, System.Int32)
+  nameWithType: GameObjectPool.GameObjectPool(Transform, GameObject, Int32)
+- uid: Slothsoft.UnityExtensions.GameObjectPool.#ctor(Transform,System.Int32)
+  name: GameObjectPool(Transform, Int32)
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool__ctor_Transform_System_Int32_
+  commentId: M:Slothsoft.UnityExtensions.GameObjectPool.#ctor(Transform,System.Int32)
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.GameObjectPool(Transform, System.Int32)
+  nameWithType: GameObjectPool.GameObjectPool(Transform, Int32)
+- uid: Slothsoft.UnityExtensions.GameObjectPool.#ctor*
+  name: GameObjectPool
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool__ctor_
+  commentId: Overload:Slothsoft.UnityExtensions.GameObjectPool.#ctor
+  isSpec: "True"
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.GameObjectPool
+  nameWithType: GameObjectPool.GameObjectPool
+- uid: Slothsoft.UnityExtensions.GameObjectPool.capacity
+  name: capacity
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool_capacity
+  commentId: F:Slothsoft.UnityExtensions.GameObjectPool.capacity
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.capacity
+  nameWithType: GameObjectPool.capacity
+- uid: Slothsoft.UnityExtensions.GameObjectPool.Dispose
+  name: Dispose()
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool_Dispose
+  commentId: M:Slothsoft.UnityExtensions.GameObjectPool.Dispose
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.Dispose()
+  nameWithType: GameObjectPool.Dispose()
+- uid: Slothsoft.UnityExtensions.GameObjectPool.Dispose*
+  name: Dispose
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool_Dispose_
+  commentId: Overload:Slothsoft.UnityExtensions.GameObjectPool.Dispose
+  isSpec: "True"
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.Dispose
+  nameWithType: GameObjectPool.Dispose
+- uid: Slothsoft.UnityExtensions.GameObjectPool.onInstantiate
+  name: onInstantiate
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool_onInstantiate
+  commentId: E:Slothsoft.UnityExtensions.GameObjectPool.onInstantiate
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.onInstantiate
+  nameWithType: GameObjectPool.onInstantiate
+- uid: Slothsoft.UnityExtensions.GameObjectPool.RequestInstance
+  name: RequestInstance()
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool_RequestInstance
+  commentId: M:Slothsoft.UnityExtensions.GameObjectPool.RequestInstance
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.RequestInstance()
+  nameWithType: GameObjectPool.RequestInstance()
+- uid: Slothsoft.UnityExtensions.GameObjectPool.RequestInstance*
+  name: RequestInstance
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool_RequestInstance_
+  commentId: Overload:Slothsoft.UnityExtensions.GameObjectPool.RequestInstance
+  isSpec: "True"
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.RequestInstance
+  nameWithType: GameObjectPool.RequestInstance
+- uid: Slothsoft.UnityExtensions.GameObjectPool.ReturnInstance(GameObject)
+  name: ReturnInstance(GameObject)
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool_ReturnInstance_GameObject_
+  commentId: M:Slothsoft.UnityExtensions.GameObjectPool.ReturnInstance(GameObject)
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.ReturnInstance(GameObject)
+  nameWithType: GameObjectPool.ReturnInstance(GameObject)
+- uid: Slothsoft.UnityExtensions.GameObjectPool.ReturnInstance*
+  name: ReturnInstance
+  href: api/Slothsoft.UnityExtensions.GameObjectPool.html#Slothsoft_UnityExtensions_GameObjectPool_ReturnInstance_
+  commentId: Overload:Slothsoft.UnityExtensions.GameObjectPool.ReturnInstance
+  isSpec: "True"
+  fullName: Slothsoft.UnityExtensions.GameObjectPool.ReturnInstance
+  nameWithType: GameObjectPool.ReturnInstance
 - uid: Slothsoft.UnityExtensions.IEnumerableExtensions
   name: IEnumerableExtensions
   href: api/Slothsoft.UnityExtensions.IEnumerableExtensions.html
