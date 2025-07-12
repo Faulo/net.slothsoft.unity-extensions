@@ -13,7 +13,8 @@
       "name": "OpenUPM",
       "url": "https://package.openupm.com",
       "scopes": [
-        "net.tnrd.nsubstitute"
+        "net.tnrd.nsubstitute",
+		"com.domybest.mybox"
       ]
     }
   ]
