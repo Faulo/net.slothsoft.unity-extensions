@@ -1,8 +1,8 @@
 using System;
 using NSubstitute;
 using NUnit.Framework;
-using Slothsoft.TestRunner;
 using UnityEngine;
+using UObject = UnityEngine.Object;
 
 namespace Slothsoft.UnityExtensions.Tests.PlayMode.ObjectPooling {
     [TestFixture(1)]
@@ -16,14 +16,12 @@ namespace Slothsoft.UnityExtensions.Tests.PlayMode.ObjectPooling {
             this.capacity = capacity;
         }
 
-        readonly TestObjectStore store = new();
-
         GameObject parent;
         GameObjectPool sut;
 
         [SetUp]
         public void SetUpSuT() {
-            parent = store.CreateGameObject();
+            parent = new();
 
             sut = new(parent.transform, capacity);
         }
@@ -32,7 +30,7 @@ namespace Slothsoft.UnityExtensions.Tests.PlayMode.ObjectPooling {
         public void TearDownSuT() {
             sut.Dispose();
 
-            store.Dispose();
+            UObject.Destroy(parent);
         }
 
         [Test]
