@@ -28,8 +28,11 @@ namespace Slothsoft.UnityExtensions.Editor {
         public static string GetNamespace(AssemblyDefinitionAsset assembly) {
             string ns = assembly.name;
             if (stripRuntimeFromNamespace) {
-                ns = assembly.name.Replace(".Runtime", "");
+                ns = ns.Replace(".Runtime", "");
             }
+
+            ns = ns.Replace(".Tests.EditMode", "");
+            ns = ns.Replace(".Tests.PlayMode", "");
 
             return CleanNamespace(ns);
         }
