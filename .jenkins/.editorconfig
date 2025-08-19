@@ -4,6 +4,9 @@
 # Changelog
 # =========
 # 
+## [1.2.0] - 2025-08-17
+# - Enums must start with E
+# 
 ## [1.1.0] - 2025-02-25
 # - Added UNT0031, UNT0032, UNT0033
 # 
@@ -179,6 +182,10 @@ dotnet_naming_rule.schnittstelle_should_be_beginnt_mit_i.severity = warning
 dotnet_naming_rule.schnittstelle_should_be_beginnt_mit_i.symbols = schnittstelle
 dotnet_naming_rule.schnittstelle_should_be_beginnt_mit_i.style = beginnt_mit_i
 
+dotnet_naming_rule.enum_should_be_beginnt_mit_e.severity = warning
+dotnet_naming_rule.enum_should_be_beginnt_mit_e.symbols = enum
+dotnet_naming_rule.enum_should_be_beginnt_mit_e.style = beginnt_mit_e
+
 dotnet_naming_rule.type_should_be_pascalcase.severity = warning
 dotnet_naming_rule.type_should_be_pascalcase.symbols = type
 dotnet_naming_rule.type_should_be_pascalcase.style = pascalcase
@@ -208,6 +215,10 @@ dotnet_naming_rule.local_event_should_be_camelcase.style = oncamelcase
 dotnet_naming_symbols.schnittstelle.applicable_kinds = interface
 dotnet_naming_symbols.schnittstelle.applicable_accessibilities = public, internal, private, protected, protected_internal
 dotnet_naming_symbols.schnittstelle.required_modifiers = 
+
+dotnet_naming_symbols.enum.applicable_kinds = enum
+dotnet_naming_symbols.enum.applicable_accessibilities = public, internal, private, protected, protected_internal
+dotnet_naming_symbols.enum.required_modifiers = 
 
 dotnet_naming_symbols.type.applicable_kinds = namespace, type_parameter, class, struct, interface, enum, delegate
 dotnet_naming_symbols.type.applicable_accessibilities = *
@@ -244,6 +255,11 @@ dotnet_naming_style.beginnt_mit_i.required_prefix = I
 dotnet_naming_style.beginnt_mit_i.required_suffix = 
 dotnet_naming_style.beginnt_mit_i.word_separator = 
 dotnet_naming_style.beginnt_mit_i.capitalization = pascal_case
+
+dotnet_naming_style.beginnt_mit_e.required_prefix = E
+dotnet_naming_style.beginnt_mit_e.required_suffix = 
+dotnet_naming_style.beginnt_mit_e.word_separator = 
+dotnet_naming_style.beginnt_mit_e.capitalization = pascal_case
 
 dotnet_naming_style.camelcase.required_prefix = 
 dotnet_naming_style.camelcase.required_suffix = 
