@@ -25,8 +25,7 @@ namespace Slothsoft.UnityExtensions.Editor {
                 .Select(info => info.assembly)
                 .FirstOrDefault();
         }
-        public static string GetNamespace(AssemblyDefinitionAsset assembly) {
-            string ns = assembly.name;
+        internal static string GetNamespace(string ns) {
             if (stripRuntimeFromNamespace) {
                 ns = ns.Replace(".Runtime", "");
             }
@@ -36,13 +35,16 @@ namespace Slothsoft.UnityExtensions.Editor {
 
             return CleanNamespace(ns);
         }
+        public static string GetNamespace(AssemblyDefinitionAsset assembly) {
+            return GetNamespace(assembly.name);
+        }
         public static string GetNamespace(AssemblyDefinitionAsset assembly, string assetPath) {
             string assemblyPath = new FileInfo(AssetDatabase.GetAssetPath(assembly)).Directory.FullName;
             string scriptPath = new FileInfo(assetPath).Directory.FullName;
             string scriptNamespace = scriptPath
                 [assemblyPath.Length..]
                 .Replace(Path.DirectorySeparatorChar, '.');
-            return CleanNamespace(GetNamespace(assembly) + scriptNamespace);
+            return CleanNamespace(GetNamespace(assembly + scriptNamespace));
         }
         static string CleanNamespace(string ns) {
             return string.Join(".", invalidTypeCharacters.Replace(ns, "").Split('.').Where(segment => !string.IsNullOrEmpty(segment)));

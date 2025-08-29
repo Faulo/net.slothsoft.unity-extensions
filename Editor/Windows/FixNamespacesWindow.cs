@@ -164,7 +164,7 @@ namespace Slothsoft.UnityExtensions.Editor {
                     });
                     foreach (var childDirectory in directory.GetDirectories()) {
                         string ns = useFolderHierarchy
-                            ? $"{rootNamespace}.{childDirectory.Name}"
+                            ? CSharpUtils.GetNamespace($"{rootNamespace}.{childDirectory.Name}")
                             : rootNamespace;
                         crawl(childDirectory, ns);
                     }
