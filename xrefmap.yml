@@ -317,6 +317,22 @@ references:
   fullName.vb: Slothsoft.UnityExtensions.Editor.AssetUtils.LoadAssetsOfType(Of T)(System.String())
   nameWithType: AssetUtils.LoadAssetsOfType<T>(String[])
   nameWithType.vb: AssetUtils.LoadAssetsOfType(Of T)(String())
+- uid: Slothsoft.UnityExtensions.Editor.AssetUtils.TryLoadSubAssetAtPath*
+  name: TryLoadSubAssetAtPath
+  href: api/Slothsoft.UnityExtensions.Editor.AssetUtils.html#Slothsoft_UnityExtensions_Editor_AssetUtils_TryLoadSubAssetAtPath_
+  commentId: Overload:Slothsoft.UnityExtensions.Editor.AssetUtils.TryLoadSubAssetAtPath
+  isSpec: "True"
+  fullName: Slothsoft.UnityExtensions.Editor.AssetUtils.TryLoadSubAssetAtPath
+  nameWithType: AssetUtils.TryLoadSubAssetAtPath
+- uid: Slothsoft.UnityExtensions.Editor.AssetUtils.TryLoadSubAssetAtPath``1(System.String,System.Int64,``0@)
+  name: TryLoadSubAssetAtPath<T>(String, Int64, out T)
+  href: api/Slothsoft.UnityExtensions.Editor.AssetUtils.html#Slothsoft_UnityExtensions_Editor_AssetUtils_TryLoadSubAssetAtPath__1_System_String_System_Int64___0__
+  commentId: M:Slothsoft.UnityExtensions.Editor.AssetUtils.TryLoadSubAssetAtPath``1(System.String,System.Int64,``0@)
+  name.vb: TryLoadSubAssetAtPath(Of T)(String, Int64, ByRef T)
+  fullName: Slothsoft.UnityExtensions.Editor.AssetUtils.TryLoadSubAssetAtPath<T>(System.String, System.Int64, out T)
+  fullName.vb: Slothsoft.UnityExtensions.Editor.AssetUtils.TryLoadSubAssetAtPath(Of T)(System.String, System.Int64, ByRef T)
+  nameWithType: AssetUtils.TryLoadSubAssetAtPath<T>(String, Int64, out T)
+  nameWithType.vb: AssetUtils.TryLoadSubAssetAtPath(Of T)(String, Int64, ByRef T)
 - uid: Slothsoft.UnityExtensions.Editor.Build
   name: Build
   href: api/Slothsoft.UnityExtensions.Editor.Build.html
