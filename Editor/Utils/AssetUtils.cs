@@ -55,5 +55,27 @@ namespace Slothsoft.UnityExtensions.Editor {
                 .Select(AssetDatabase.LoadAssetAtPath<T>)
                 .Where(asset => asset);
         }
+
+        /// <summary>
+        /// Attempts to load a sub asset by its file ID.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="assetPath"></param>
+        /// <param name="fileId"></param>
+        /// <param name="asset"></param>
+        /// <returns></returns>
+        public static bool TryLoadSubAssetAtPath<T>(string assetPath, long fileId, out T asset) where T : UnityObject {
+            foreach (var subAsset in AssetDatabase.LoadAllAssetsAtPath(assetPath)) {
+                if (AssetDatabase.TryGetGUIDAndLocalFileIdentifier(subAsset, out _, out long subFileId)) {
+                    if (subFileId == fileId && subAsset is T subAssetCast) {
+                        asset = subAssetCast;
+                        return true;
+                    }
+                }
+            }
+
+            asset = default;
+            return false;
+        }
     }
 }
