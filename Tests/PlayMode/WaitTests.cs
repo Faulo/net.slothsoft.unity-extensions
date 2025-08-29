@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Diagnostics;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
@@ -7,7 +6,8 @@ using UnityEngine.TestTools;
 namespace Slothsoft.UnityExtensions.Tests.PlayMode {
     [TestFixture(TestOf = typeof(Wait))]
     sealed class WaitTests {
-        float errorMargin => Time.fixedDeltaTime;
+        static float errorMargin => Time.fixedDeltaTime;
+
         [UnityTest]
         public IEnumerator TestWaitForEndOfFrame() {
             if (Application.isBatchMode) {
@@ -15,39 +15,60 @@ namespace Slothsoft.UnityExtensions.Tests.PlayMode {
                 yield break;
             }
 
-            var stopWatch = new Stopwatch();
             yield return Wait.forEndOfFrame;
-            stopWatch.Start();
+
+            StartStopWatch();
             yield return Wait.forEndOfFrame;
-            stopWatch.Stop();
-            Assert.AreEqual(stopWatch.Elapsed.TotalSeconds, Time.fixedDeltaTime, errorMargin);
+
+            Assert.That(ElapsedTime(), Is.EqualTo(Time.fixedDeltaTime).Within(errorMargin));
         }
+
         [UnityTest]
         public IEnumerator TestWaitFixedUpdate() {
-            var stopWatch = new Stopwatch();
             yield return Wait.forFixedUpdate;
-            stopWatch.Start();
+
+            StartStopWatch();
             yield return Wait.forFixedUpdate;
-            stopWatch.Stop();
-            Assert.AreEqual(stopWatch.Elapsed.TotalSeconds, Time.fixedDeltaTime, errorMargin);
+
+            Assert.That(ElapsedTime(), Is.EqualTo(Time.fixedDeltaTime).Within(errorMargin));
         }
+
+        [TestCase(0.1f, ExpectedResult = null)]
+        [TestCase(0.3f, ExpectedResult = null)]
         [UnityTest]
-        public IEnumerator TestWaitForSeconds() {
-            var stopWatch = new Stopwatch();
+        public IEnumerator TestWaitForSeconds(float time) {
             yield return null;
-            stopWatch.Start();
-            yield return Wait.forSeconds[0.1f];
-            stopWatch.Stop();
-            Assert.AreEqual(stopWatch.Elapsed.TotalSeconds, 0.1f, errorMargin);
+
+            StartStopWatch();
+            yield return Wait.forSeconds[time];
+
+            Assert.That(ElapsedTime(), Is.EqualTo(time).Within(errorMargin));
         }
+
+        [TestCase(0, 0.1f, ExpectedResult = null)]
+        [TestCase(10, 0.3f, ExpectedResult = null)]
         [UnityTest]
-        public IEnumerator TestWaitForSecondsRealtime() {
-            var stopWatch = new Stopwatch();
+        public IEnumerator TestWaitForSecondsRealtime(float timeScale, float time) {
+            Time.timeScale = timeScale;
+
             yield return null;
-            stopWatch.Start();
-            yield return Wait.forSecondsRealtime[0.1f];
-            stopWatch.Stop();
-            Assert.AreEqual(stopWatch.Elapsed.TotalSeconds, 0.1f, errorMargin);
+
+            StartStopWatch(true);
+            yield return Wait.forSecondsRealtime[time];
+
+            Assert.That(ElapsedTime(true), Is.EqualTo(time).Within(errorMargin));
+        }
+
+        float start;
+        void StartStopWatch(bool useRealTime = false) {
+            start = useRealTime
+                ? Time.unscaledTime
+                : Time.time;
+        }
+        float ElapsedTime(bool useRealTime = false) {
+            return useRealTime
+                ? Time.unscaledTime - start
+                : Time.time - start;
         }
     }
 }
