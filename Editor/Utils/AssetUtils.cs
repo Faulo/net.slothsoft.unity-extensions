@@ -13,7 +13,13 @@ namespace Slothsoft.UnityExtensions.Editor {
         /// <param name="file">The location of the asset. Can be a <see cref="FileInfo"/> or a <see cref="DirectoryInfo"/>.</param>
         /// <returns>The asset if it exists, null otherwise.</returns>
         public static T LoadAssetAtFile<T>(FileSystemInfo file) where T : UnityObject {
-            var asset = AssetDatabase.LoadAssetAtPath<T>(file.ToString());
+            string assetPath = file.ToString();
+            string rootPath = new DirectoryInfo(".").FullName;
+            if (assetPath.StartsWith(rootPath)) {
+                assetPath = assetPath[(rootPath.Length + 1)..];
+            }
+
+            var asset = AssetDatabase.LoadAssetAtPath<T>(assetPath);
             if (!asset) {
                 string path = file.FullName;
                 string root = new DirectoryInfo(".").FullName;
