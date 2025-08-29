@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Slothsoft.UnityExtensions.Editor {
     [Serializable]
     sealed class ProjectFileSettings {
-        enum WarningLevel {
+        enum EWarningLevel {
             _0TurnOffAllWarnings = 0,
             _1DisplayOnlySevereWarnings = 1,
             _2DisplaySomeWarnings = 2,
@@ -19,7 +19,7 @@ namespace Slothsoft.UnityExtensions.Editor {
         [SerializeField, Tooltip("Version number to write in <LangVersion>. Recommended: '7.3' for VS2019, 'latest' for VS2017")]
         internal string setCSharpVersionTo = "7.3";
         [SerializeField, Tooltip("Warning level to write in <WarningLevel>. Recommended: '4' for project, '0' for plugins")]
-        WarningLevel m_setWarningLevelTo = WarningLevel._4DisplayAllWarnings;
+        EWarningLevel m_setWarningLevelTo = EWarningLevel._4DisplayAllWarnings;
         internal string setWarningLevelTo => ((int)m_setWarningLevelTo).ToString();
 
         internal bool Matches(string assemblyName) => affectedAssemblies.Any(assembly => assembly ? assembly.name == assemblyName : false);

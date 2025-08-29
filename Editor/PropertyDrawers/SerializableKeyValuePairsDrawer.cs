@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Slothsoft.UnityExtensions.Editor {
     [CustomPropertyDrawer(typeof(SerializableKeyValuePairs<,>), true)]
     public class SerializableKeyValuePairsDrawer : PropertyDrawer {
-        enum LineMode {
+        enum ELineMode {
             ShortKeyShortValue,
             ShortKeyLongValue,
             LongKeyShortValue,
@@ -22,7 +22,7 @@ namespace Slothsoft.UnityExtensions.Editor {
         }
 
         (Type key, Type value) genericTypes;
-        LineMode lineMode;
+        ELineMode lineMode;
 
         bool isSingleLine => IsInlineType(genericTypes.key) || IsInlineType(genericTypes.value);
         bool IsInlineType(Type type) => !(type.IsClass || type.IsInterface);
@@ -31,12 +31,12 @@ namespace Slothsoft.UnityExtensions.Editor {
             genericTypes = GetGenericTypes();
             if (IsInlineType(genericTypes.key)) {
                 lineMode = IsInlineType(genericTypes.value)
-                    ? LineMode.ShortKeyShortValue
-                    : LineMode.ShortKeyLongValue;
+                    ? ELineMode.ShortKeyShortValue
+                    : ELineMode.ShortKeyLongValue;
             } else {
                 lineMode = IsInlineType(genericTypes.value)
-                    ? LineMode.LongKeyShortValue
-                    : LineMode.LongKeyLongValue;
+                    ? ELineMode.LongKeyShortValue
+                    : ELineMode.LongKeyLongValue;
             }
         }
 
@@ -54,7 +54,7 @@ namespace Slothsoft.UnityExtensions.Editor {
                     var key = item.FindPropertyRelative("key");
                     var value = item.FindPropertyRelative("value");
 
-                    if (lineMode == LineMode.LongKeyLongValue) {
+                    if (lineMode == ELineMode.LongKeyLongValue) {
                         totalHeight += EditorGUI.GetPropertyHeight(key, true);
                         totalHeight += EditorGUI.GetPropertyHeight(value, true);
                         totalHeight += EditorGUIUtility.standardVerticalSpacing;
@@ -67,11 +67,11 @@ namespace Slothsoft.UnityExtensions.Editor {
             return totalHeight;
         }
 
-        static readonly Dictionary<LineMode, (float key, float value)> lineSettings = new() {
-            [LineMode.ShortKeyShortValue] = (0.5f, 0.5f),
-            [LineMode.ShortKeyLongValue] = (0.3f, 0.7f),
-            [LineMode.LongKeyShortValue] = (0.7f, 0.3f),
-            [LineMode.LongKeyLongValue] = (0.5f, 0.5f),
+        static readonly Dictionary<ELineMode, (float key, float value)> lineSettings = new() {
+            [ELineMode.ShortKeyShortValue] = (0.5f, 0.5f),
+            [ELineMode.ShortKeyLongValue] = (0.3f, 0.7f),
+            [ELineMode.LongKeyShortValue] = (0.7f, 0.3f),
+            [ELineMode.LongKeyLongValue] = (0.5f, 0.5f),
         };
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
@@ -120,7 +120,7 @@ namespace Slothsoft.UnityExtensions.Editor {
                     rect.height = EditorGUIUtility.singleLineHeight;
                     EditorGUI.LabelField(rect, new GUIContent($"#{i}"), new GUIStyle(EditorStyles.miniLabel) { alignment = TextAnchor.MiddleRight });
 
-                    if (lineMode == LineMode.LongKeyLongValue) {
+                    if (lineMode == ELineMode.LongKeyLongValue) {
                         rect.x = position.x;
                         rect.width = position.width;
                         rect.height = EditorGUI.GetPropertyHeight(key, true);

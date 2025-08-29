@@ -157,15 +157,15 @@ namespace Slothsoft.UnityExtensions.Editor {
         /// <param name="rect">The Rect where the background is drawn.</param>
         void DrawBackground(Rect rect) {
             switch (settings.backgroundStyle) {
-                case ExpandableBackgroundStyle.None:
+                case EExpandableBackgroundStyle.None:
                     break;
-                case ExpandableBackgroundStyle.HelpBox:
+                case EExpandableBackgroundStyle.HelpBox:
                     EditorGUI.HelpBox(rect, "", MessageType.None);
                     break;
-                case ExpandableBackgroundStyle.Darken:
+                case EExpandableBackgroundStyle.Darken:
                     EditorGUI.DrawRect(rect, settings.darkenColor);
                     break;
-                case ExpandableBackgroundStyle.Lighten:
+                case EExpandableBackgroundStyle.Lighten:
                     EditorGUI.DrawRect(rect, settings.lightenColor);
                     break;
             }

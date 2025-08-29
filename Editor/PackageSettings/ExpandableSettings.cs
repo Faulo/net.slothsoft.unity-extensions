@@ -19,7 +19,7 @@ namespace Slothsoft.UnityExtensions.Editor {
 
         [Header("Background")]
         [SerializeField, Tooltip("The style the background uses.")]
-        internal ExpandableBackgroundStyle backgroundStyle = ExpandableBackgroundStyle.HelpBox;
+        internal EExpandableBackgroundStyle backgroundStyle = EExpandableBackgroundStyle.HelpBox;
 
         [SerializeField, Tooltip("The colour that is used to darken the background.")]
         internal Color darkenColor = new(0, 0, 0, 0.2f);
