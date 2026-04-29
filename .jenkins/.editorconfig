@@ -182,7 +182,7 @@ dotnet_naming_rule.schnittstelle_should_be_beginnt_mit_i.severity = warning
 dotnet_naming_rule.schnittstelle_should_be_beginnt_mit_i.symbols = schnittstelle
 dotnet_naming_rule.schnittstelle_should_be_beginnt_mit_i.style = beginnt_mit_i
 
-dotnet_naming_rule.enum_should_be_beginnt_mit_e.severity = warning
+dotnet_naming_rule.enum_should_be_beginnt_mit_e.severity = none
 dotnet_naming_rule.enum_should_be_beginnt_mit_e.symbols = enum
 dotnet_naming_rule.enum_should_be_beginnt_mit_e.style = beginnt_mit_e
 
