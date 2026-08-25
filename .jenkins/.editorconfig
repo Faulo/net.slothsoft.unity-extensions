@@ -3,30 +3,210 @@
 #
 # Changelog
 # =========
-# 
+#
+## [1.4.0] - 2026-08-02
+# - Groovy support
+#
+## [1.3.3] - 2026-05-23
+# - PHP empty lines keep code indentation.
+#
+## [1.3.2] - 2026-05-13
+# - XML support
+#
+## [1.3.1] - 2026-05-12
+# - PHP line endings
+#
+## [1.3.0] - 2026-05-12
+# - PHP support
+#
 ## [1.2.0] - 2025-08-17
 # - Enums must start with E
-# 
+#
 ## [1.1.0] - 2025-02-25
 # - Added UNT0031, UNT0032, UNT0033
-# 
+#
 ## [1.0.0] - 2024-11-23
-# - Initial Release.
+# - Initial release.
 
 root = true
 
-# C#-Dateien
-[*.cs]
-
 #### Wichtige EditorConfig-Optionen ####
+
+[*]
 
 # Einzüge und Abstände
 indent_size = 4
 indent_style = space
 tab_width = 4
+max_line_length = 200
+
+# application/xml
+ij_xml_space_inside_empty_tag = true
+
+# PHP-Dateien
+[*.php]
 
 # Einstellungen für neue Zeilen
-trim_trailing_whitespace = true
+trim_trailing_whitespace = false
+end_of_line = lf
+
+#### JetBrains / PhpStorm ####
+
+# Einzüge und Formatter-Tags
+ij_continuation_indent_size = 4
+ij_formatter_off_tag = @formatter:off
+ij_formatter_on_tag = @formatter:on
+ij_formatter_tags_enabled = true
+ij_any_keep_indents_on_empty_lines = true
+ij_visual_guides = none
+ij_wrap_on_typing = false
+
+# Zeilenumbrüche und Klammerstil: öffnende geschweifte Klammern bleiben in derselben Zeile.
+ij_php_block_brace_style = end_of_line
+ij_php_class_brace_style = end_of_line
+ij_php_method_brace_style = end_of_line
+ij_php_lambda_brace_style = end_of_line
+ij_php_catch_on_new_line = false
+ij_php_else_on_new_line = false
+ij_php_finally_on_new_line = false
+ij_php_while_on_new_line = false
+
+# Leere Zeilen, grob aus Eclipse übernommen.
+ij_php_blank_lines_after_imports = 0
+ij_php_blank_lines_before_imports = 0
+ij_php_blank_lines_between_imports = 0
+ij_php_blank_lines_before_method_body = 0
+ij_php_blank_lines_before_class_end = 0
+ij_php_blank_lines_around_field = 1
+ij_php_blank_lines_around_method = 1
+ij_php_blank_lines_around_class = 1
+ij_php_keep_blank_lines_in_code = 1
+ij_php_keep_blank_lines_in_declarations = 1
+ij_php_keep_blank_lines_after_lbrace = 0
+ij_php_keep_blank_lines_before_right_brace = 0
+
+# Einrückung in Blöcken, switch/case und match-Armen.
+ij_php_indent_case_from_switch = true
+ij_php_indent_break_from_case = true
+ij_php_keep_indents_on_empty_lines = true
+
+# Kommas, Semikolons und Ternary-Operator.
+ij_php_space_after_comma = true
+ij_php_space_before_comma = false
+ij_php_space_after_for_semicolon = true
+ij_php_space_before_for_semicolon = false
+ij_php_space_after_quest = true
+ij_php_space_before_quest = true
+ij_php_space_between_ternary_quest_and_colon = false
+
+# Doppelpunkte: kein Space vor Return-Type / Named Argument / Enum-Backed-Type, aber Space danach.
+ij_php_space_before_colon_in_return_type = false
+ij_php_space_after_colon_in_return_type = true
+ij_php_space_before_colon_in_named_argument = false
+ij_php_space_after_colon_in_named_argument = true
+ij_php_space_before_colon_in_enum_backed_type = false
+ij_php_space_after_colon_in_enum_backed_type = true
+
+# Klammern: Space vor Kontrollfluss-Klammern, kein Space bei Deklarationen/Aufrufen.
+ij_php_space_before_catch_parentheses = true
+ij_php_space_before_for_parentheses = true
+ij_php_space_before_if_parentheses = true
+ij_php_space_before_switch_parentheses = true
+ij_php_space_before_while_parentheses = true
+ij_php_space_before_method_parentheses = false
+ij_php_space_before_method_call_parentheses = false
+ij_php_space_before_short_closure_left_parenthesis = false
+
+# Geschweifte Klammern: ein Space davor.
+ij_php_space_before_catch_left_brace = true
+ij_php_space_before_class_left_brace = true
+ij_php_space_before_closure_left_parenthesis = true
+ij_php_space_before_do_left_brace = true
+ij_php_space_before_else_left_brace = true
+ij_php_space_before_finally_left_brace = true
+ij_php_space_before_for_left_brace = true
+ij_php_space_before_if_left_brace = true
+ij_php_space_before_method_left_brace = true
+ij_php_space_before_switch_left_brace = true
+ij_php_space_before_try_left_brace = true
+ij_php_space_before_while_left_brace = true
+
+# Keine Spaces innerhalb runder/eckiger Klammern.
+ij_php_spaces_within_array_initializer_braces = false
+ij_php_spaces_within_brackets = false
+ij_php_spaces_within_catch_parentheses = false
+ij_php_spaces_within_for_parentheses = false
+ij_php_spaces_within_if_parentheses = false
+ij_php_spaces_within_method_call_parentheses = false
+ij_php_spaces_within_method_parentheses = false
+ij_php_spaces_within_parentheses = false
+ij_php_spaces_within_switch_parentheses = false
+ij_php_spaces_within_while_parentheses = false
+
+# Operatoren.
+ij_php_concat_spaces = true
+ij_php_spaces_around_additive_operators = true
+ij_php_spaces_around_assignment_operators = true
+ij_php_spaces_around_bitwise_operators = true
+ij_php_spaces_around_equality_operators = true
+ij_php_spaces_around_logical_operators = true
+ij_php_spaces_around_multiplicative_operators = true
+ij_php_spaces_around_null_coalesce_operator = true
+ij_php_spaces_around_relational_operators = true
+ij_php_spaces_around_shift_operators = true
+ij_php_spaces_around_unary_operator = false
+ij_php_spaces_around_arrow = false
+
+# PHP-spezifisch: PSR-kompatibler Cast-Abstand aus dem Eclipse-Profil.
+ij_php_space_after_type_cast = true
+ij_php_space_after_unary_not = true
+ij_php_space_before_unary_not = false
+
+# Keine vertikale Ausrichtung erzwingen.
+ij_php_align_assignments = false
+ij_php_align_class_constants = false
+ij_php_align_enum_cases = false
+ij_php_align_group_field_declarations = false
+ij_php_align_inline_comments = false
+ij_php_align_key_value_pairs = false
+ij_php_align_match_arm_bodies = false
+ij_php_align_multiline_array_initializer_expression = false
+ij_php_align_multiline_binary_operation = false
+ij_php_align_multiline_parameters = false
+
+# Wrapping: entspricht grob dem sehr hohen Eclipse lineSplit-Wert.
+ij_php_array_initializer_wrap = off
+ij_php_assignment_wrap = off
+ij_php_binary_operation_wrap = off
+ij_php_call_parameters_wrap = off
+ij_php_extends_list_wrap = off
+ij_php_for_statement_wrap = off
+ij_php_method_call_chain_wrap = off
+ij_php_method_parameters_wrap = off
+ij_php_ternary_operation_wrap = off
+
+# Sonstiges.
+ij_php_comma_after_last_argument = false
+ij_php_comma_after_last_array_element = false
+ij_php_comma_after_last_closure_use_var = false
+ij_php_comma_after_last_match_arm = false
+ij_php_comma_after_last_parameter = false
+ij_php_import_sorting = alphabetic
+ij_php_keep_line_breaks = true
+ij_php_keep_control_statement_in_one_line = false
+ij_php_keep_simple_classes_in_one_line = false
+ij_php_keep_simple_methods_in_one_line = false
+ij_php_lower_case_keywords = true
+ij_php_upper_case_boolean_const = false
+ij_php_upper_case_null_const = false
+ij_php_variable_naming_style = camel_case
+ij_php_spaces_around_assignment_in_declare = true
+
+# C#-Dateien
+[*.cs]
+
+# Einstellungen für neue Zeilen
+trim_trailing_whitespace = false
 end_of_line = crlf
 
 #### .NET-Codierungskonventionen ####
@@ -102,7 +282,7 @@ csharp_style_conditional_delegate_call = true:warning
 
 # Einstellungen für Modifizierer
 csharp_prefer_static_local_function = true:warning
-csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:warning
+csharp_preferred_modifier_order = public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:warning
 
 # Einstellungen für Codeblöcke
 csharp_prefer_braces = true:warning
@@ -214,31 +394,31 @@ dotnet_naming_rule.local_event_should_be_camelcase.style = oncamelcase
 
 dotnet_naming_symbols.schnittstelle.applicable_kinds = interface
 dotnet_naming_symbols.schnittstelle.applicable_accessibilities = public, internal, private, protected, protected_internal
-dotnet_naming_symbols.schnittstelle.required_modifiers = 
+dotnet_naming_symbols.schnittstelle.required_modifiers =
 
 dotnet_naming_symbols.enum.applicable_kinds = enum
 dotnet_naming_symbols.enum.applicable_accessibilities = public, internal, private, protected, protected_internal
-dotnet_naming_symbols.enum.required_modifiers = 
+dotnet_naming_symbols.enum.required_modifiers =
 
 dotnet_naming_symbols.type.applicable_kinds = namespace, type_parameter, class, struct, interface, enum, delegate
 dotnet_naming_symbols.type.applicable_accessibilities = *
-dotnet_naming_symbols.type.required_modifiers = 
+dotnet_naming_symbols.type.required_modifiers =
 
 dotnet_naming_symbols.non_method_member.applicable_kinds = property, field
 dotnet_naming_symbols.non_method_member.applicable_accessibilities = public, internal, friend, protected, protected_internal, protected_friend
-dotnet_naming_symbols.non_method_member.required_modifiers = 
+dotnet_naming_symbols.non_method_member.required_modifiers =
 
 dotnet_naming_symbols.event.applicable_kinds = event
 dotnet_naming_symbols.event.applicable_accessibilities = *
-dotnet_naming_symbols.event.required_modifiers = 
+dotnet_naming_symbols.event.required_modifiers =
 
 dotnet_naming_symbols.local_variable.applicable_kinds = parameter, local, local_function
 dotnet_naming_symbols.local_variable.applicable_accessibilities = *
-dotnet_naming_symbols.local_variable.required_modifiers = 
+dotnet_naming_symbols.local_variable.required_modifiers =
 
 dotnet_naming_symbols.method_member.applicable_kinds = method
 dotnet_naming_symbols.method_member.applicable_accessibilities = *
-dotnet_naming_symbols.method_member.required_modifiers = 
+dotnet_naming_symbols.method_member.required_modifiers =
 
 dotnet_naming_symbols.constants.applicable_kinds = field
 dotnet_naming_symbols.constants.applicable_accessibilities = *
@@ -246,115 +426,115 @@ dotnet_naming_symbols.constants.required_modifiers = const
 
 # Benennungsstile
 
-dotnet_naming_style.pascalcase.required_prefix = 
-dotnet_naming_style.pascalcase.required_suffix = 
-dotnet_naming_style.pascalcase.word_separator = 
+dotnet_naming_style.pascalcase.required_prefix =
+dotnet_naming_style.pascalcase.required_suffix =
+dotnet_naming_style.pascalcase.word_separator =
 dotnet_naming_style.pascalcase.capitalization = pascal_case
 
 dotnet_naming_style.beginnt_mit_i.required_prefix = I
-dotnet_naming_style.beginnt_mit_i.required_suffix = 
-dotnet_naming_style.beginnt_mit_i.word_separator = 
+dotnet_naming_style.beginnt_mit_i.required_suffix =
+dotnet_naming_style.beginnt_mit_i.word_separator =
 dotnet_naming_style.beginnt_mit_i.capitalization = pascal_case
 
 dotnet_naming_style.beginnt_mit_e.required_prefix = E
-dotnet_naming_style.beginnt_mit_e.required_suffix = 
-dotnet_naming_style.beginnt_mit_e.word_separator = 
+dotnet_naming_style.beginnt_mit_e.required_suffix =
+dotnet_naming_style.beginnt_mit_e.word_separator =
 dotnet_naming_style.beginnt_mit_e.capitalization = pascal_case
 
-dotnet_naming_style.camelcase.required_prefix = 
-dotnet_naming_style.camelcase.required_suffix = 
-dotnet_naming_style.camelcase.word_separator = 
+dotnet_naming_style.camelcase.required_prefix =
+dotnet_naming_style.camelcase.required_suffix =
+dotnet_naming_style.camelcase.word_separator =
 dotnet_naming_style.camelcase.capitalization = camel_case
 
 dotnet_naming_style.oncamelcase.required_prefix = on
-dotnet_naming_style.oncamelcase.required_suffix = 
-dotnet_naming_style.oncamelcase.word_separator = 
+dotnet_naming_style.oncamelcase.required_suffix =
+dotnet_naming_style.oncamelcase.word_separator =
 dotnet_naming_style.oncamelcase.capitalization = pascal_case
 
-dotnet_naming_style.capslock.required_prefix = 
-dotnet_naming_style.capslock.required_suffix = 
-dotnet_naming_style.capslock.word_separator = 
+dotnet_naming_style.capslock.required_prefix =
+dotnet_naming_style.capslock.required_suffix =
+dotnet_naming_style.capslock.word_separator =
 dotnet_naming_style.capslock.capitalization = all_upper
 
 # Unity Tools https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/index.md
 
 ## Empty Unity message
-dotnet_diagnostic.UNT0001.severity = none		
+dotnet_diagnostic.UNT0001.severity = none
 
 ## Inefficient tag comparison
-dotnet_diagnostic.UNT0002.severity = warning	
+dotnet_diagnostic.UNT0002.severity = warning
 
 ## Usage of non generic GetComponent
-dotnet_diagnostic.UNT0003.severity = warning	
+dotnet_diagnostic.UNT0003.severity = warning
 
 ## Time.fixedDeltaTime used with Update
-dotnet_diagnostic.UNT0004.severity = warning	
+dotnet_diagnostic.UNT0004.severity = warning
 
 ## Time.deltaTime used with FixedUpdate
-dotnet_diagnostic.UNT0005.severity = none		
+dotnet_diagnostic.UNT0005.severity = none
 
 ## Incorrect message signature
-dotnet_diagnostic.UNT0006.severity = warning	
+dotnet_diagnostic.UNT0006.severity = warning
 
-## Null coalescing on Unity objects 
-dotnet_diagnostic.UNT0007.severity = warning	
+## Null coalescing on Unity objects
+dotnet_diagnostic.UNT0007.severity = warning
 
 ## Null propagation on Unity objects
-dotnet_diagnostic.UNT0008.severity = warning	
+dotnet_diagnostic.UNT0008.severity = warning
 
 ## Missing static constructor with InitializeOnLoad
-dotnet_diagnostic.UNT0009.severity = warning	
+dotnet_diagnostic.UNT0009.severity = warning
 
 ## MonoBehaviour instance creation
-dotnet_diagnostic.UNT0010.severity = warning	
+dotnet_diagnostic.UNT0010.severity = warning
 
 ## ScriptableObject instance creation
-dotnet_diagnostic.UNT0011.severity = warning	
+dotnet_diagnostic.UNT0011.severity = warning
 
 ## Unused coroutine return value
-dotnet_diagnostic.UNT0012.severity = warning	
+dotnet_diagnostic.UNT0012.severity = warning
 
 ## Invalid or redundant SerializeField attribute
-dotnet_diagnostic.UNT0013.severity = none		
+dotnet_diagnostic.UNT0013.severity = none
 
 ## GetComponent called with non-Component or non-Interface type
-dotnet_diagnostic.UNT0014.severity = warning	
+dotnet_diagnostic.UNT0014.severity = warning
 
 ## Incorrect method signature with InitializeOnLoadMethod or RuntimeInitializeOnLoadMethod attribute
-dotnet_diagnostic.UNT0015.severity = warning	
+dotnet_diagnostic.UNT0015.severity = warning
 
 ## Unsafe way to get the method name
-dotnet_diagnostic.UNT0016.severity = warning	
+dotnet_diagnostic.UNT0016.severity = warning
 
 ## SetPixels invocation is slow
-dotnet_diagnostic.UNT0017.severity = none		
+dotnet_diagnostic.UNT0017.severity = none
 
 ## System.Reflection features in performance critical messages
-dotnet_diagnostic.UNT0018.severity = warning	
+dotnet_diagnostic.UNT0018.severity = warning
 
 ## Unnecessary indirection call for GameObject.gameObject
-dotnet_diagnostic.UNT0019.severity = warning	
+dotnet_diagnostic.UNT0019.severity = warning
 
 ## MenuItem attribute used on non-static method
-dotnet_diagnostic.UNT0020.severity = warning	
+dotnet_diagnostic.UNT0020.severity = warning
 
 ## Unity message should be protected [opt-in]
-dotnet_diagnostic.UNT0021.severity = warning	
+dotnet_diagnostic.UNT0021.severity = warning
 
 ## Inefficient method to set position and rotation
-dotnet_diagnostic.UNT0022.severity = warning	
+dotnet_diagnostic.UNT0022.severity = warning
 
 ## Coalescing assignment on Unity objects
-dotnet_diagnostic.UNT0023.severity = warning	
+dotnet_diagnostic.UNT0023.severity = warning
 
 ## Give priority to scalar calculations over vector calculations
-dotnet_diagnostic.UNT0024.severity = warning	
+dotnet_diagnostic.UNT0024.severity = warning
 
 ## Input.GetKey overloads with KeyCode argument
-dotnet_diagnostic.UNT0025.severity = warning	
+dotnet_diagnostic.UNT0025.severity = warning
 
 ## GetComponent always allocates
-dotnet_diagnostic.UNT0026.severity = warning	
+dotnet_diagnostic.UNT0026.severity = warning
 
 ## UNT0031 Asset operations in LoadAttribute method
 dotnet_diagnostic.UNT0031.severity = warning
@@ -367,3 +547,25 @@ dotnet_diagnostic.UNT0033.severity = warning
 
 # @UNT0004+UNT0005: https://docs.unity3d.com/ScriptReference/Time-fixedDeltaTime.html
 # @UNT0007+UNT0008: https://stackoverflow.com/questions/58487442/why-does-resharper-not-suggest-using-null-propagation-for-both-of-these-blocks
+
+# Groovy-Dateien
+[*.groovy]
+
+#### JetBrains / IntelliJ IDEA ####
+
+ij_continuation_indent_size = 4
+ij_any_keep_indents_on_empty_lines = false
+ij_groovy_brace_style = end_of_line
+ij_groovy_class_brace_style = end_of_line
+ij_groovy_method_brace_style = end_of_line
+ij_groovy_keep_line_breaks = true
+ij_groovy_align_multiline_list_or_map = false
+ij_groovy_align_named_args_in_map = false
+ij_groovy_space_before_closure_lbrace = true
+ij_groovy_space_in_named_argument_before_colon = false
+ij_groovy_space_in_named_argument = true
+ij_groovy_space_within_list_or_map = false
+ij_groovy_space_within_gstring_injection_braces = false
+ij_groovy_wrap_chain_calls_after_dot = false
+ij_groovy_use_flying_geese_braces = false
+
